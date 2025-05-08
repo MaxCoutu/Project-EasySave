@@ -1,0 +1,14 @@
+C:\Users\jmail\source\repos\Projet\Projet\obj\Debug\netcoreapp3.1\Projet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jmail\source\repos\Projet\Projet\obj\Debug\netcoreapp3.1\Projet.AssemblyInfoInputs.cache
+C:\Users\jmail\source\repos\Projet\Projet\obj\Debug\netcoreapp3.1\Projet.AssemblyInfo.cs
+C:\Users\jmail\source\repos\Projet\Projet\obj\Debug\netcoreapp3.1\Projet.csproj.CoreCompileInputs.cache
+C:\Users\jmail\source\repos\Projet\Projet\obj\Debug\netcoreapp3.1\Projet.sourcelink.json
+C:\Users\jmail\source\repos\Projet\Projet\bin\Debug\netcoreapp3.1\Projet.exe
+C:\Users\jmail\source\repos\Projet\Projet\bin\Debug\netcoreapp3.1\Projet.deps.json
+C:\Users\jmail\source\repos\Projet\Projet\bin\Debug\netcoreapp3.1\Projet.runtimeconfig.json
+C:\Users\jmail\source\repos\Projet\Projet\bin\Debug\netcoreapp3.1\Projet.runtimeconfig.dev.json
+C:\Users\jmail\source\repos\Projet\Projet\bin\Debug\netcoreapp3.1\Projet.dll
+C:\Users\jmail\source\repos\Projet\Projet\bin\Debug\netcoreapp3.1\Projet.pdb
+C:\Users\jmail\source\repos\Projet\Projet\obj\Debug\netcoreapp3.1\Projet.dll
+C:\Users\jmail\source\repos\Projet\Projet\obj\Debug\netcoreapp3.1\Projet.pdb
+C:\Users\jmail\source\repos\Projet\Projet\obj\Debug\netcoreapp3.1\Projet.genruntimeconfig.cache
