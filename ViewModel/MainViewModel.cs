@@ -1,6 +1,4 @@
-﻿using Projet.Infrastructure;
-using Projet.Model;
-using Projet.Service;
+﻿using Projet.Service;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,6 +10,7 @@ namespace Projet.ViewModel
     public class MainViewModel : ViewModelBase
     {
         private readonly IBackupService _svc;
+        private readonly ILogService _logService;
 
         public ObservableCollection<BackupJob> Jobs { get; }
         private BackupJob _selectedJob;
@@ -23,10 +22,11 @@ namespace Projet.ViewModel
 
         public event Action<StatusEntry> StatusUpdated;
 
-        public MainViewModel(IBackupService svc)
+        public MainViewModel(IBackupService svc, ILogService logService)
         {
             _svc = svc;
-            Jobs = new ObservableCollection<BackupJob>(_svc.GetJobs());
+            _logService = logService;
+            Jobs = new ObservableCollection<BackupJob>(_logService.LoadJobs());
             _svc.StatusUpdated += s => StatusUpdated?.Invoke(s);
         }
 

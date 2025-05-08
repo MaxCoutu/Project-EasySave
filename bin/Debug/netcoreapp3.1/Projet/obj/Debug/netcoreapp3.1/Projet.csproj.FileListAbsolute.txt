@@ -26,3 +26,17 @@ C:\Users\jmail\source\repos\MaxCoutu\Project-EasySave\bin\Debug\netcoreapp3.1\Pr
 C:\Users\jmail\source\repos\MaxCoutu\Project-EasySave\bin\Debug\netcoreapp3.1\Projet\obj\Debug\netcoreapp3.1\Projet.dll
 C:\Users\jmail\source\repos\MaxCoutu\Project-EasySave\bin\Debug\netcoreapp3.1\Projet\obj\Debug\netcoreapp3.1\Projet.pdb
 C:\Users\jmail\source\repos\MaxCoutu\Project-EasySave\bin\Debug\netcoreapp3.1\Projet\obj\Debug\netcoreapp3.1\Projet.genruntimeconfig.cache
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\bin\Debug\netcoreapp3.1\Projet.exe
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\bin\Debug\netcoreapp3.1\Projet.deps.json
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\bin\Debug\netcoreapp3.1\Projet.runtimeconfig.json
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\bin\Debug\netcoreapp3.1\Projet.runtimeconfig.dev.json
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\bin\Debug\netcoreapp3.1\Projet.dll
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\bin\Debug\netcoreapp3.1\Projet.pdb
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\obj\Debug\netcoreapp3.1\Projet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\obj\Debug\netcoreapp3.1\Projet.AssemblyInfoInputs.cache
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\obj\Debug\netcoreapp3.1\Projet.AssemblyInfo.cs
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\obj\Debug\netcoreapp3.1\Projet.csproj.CoreCompileInputs.cache
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\obj\Debug\netcoreapp3.1\Projet.sourcelink.json
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\obj\Debug\netcoreapp3.1\Projet.dll
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\obj\Debug\netcoreapp3.1\Projet.pdb
+C:\Users\Maxendre\CESI\FISE A3\Projet\bin\Debug\netcoreapp3.1\Projet\obj\Debug\netcoreapp3.1\Projet.genruntimeconfig.cache

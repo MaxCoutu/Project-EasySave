@@ -8,17 +8,16 @@ using System.Threading.Tasks;
 
 namespace Projet.Service
 {
-    public class BackupService: IBackupService
+    public class BackupService : IBackupService
     {
         public event Action<StatusEntry> StatusUpdated;
 
         private readonly ILogger _logger;
-        private readonly List<BackupJob> _jobs = new List<BackupJob>();
+        private List<BackupJob> _jobs = new List<BackupJob>();
         private const int MaxJobs = 5;
 
         public BackupService(ILogger logger) => _logger = logger;
 
-        
         public void AddBackup(BackupJob job)
         {
             if (_jobs.Count >= MaxJobs)
@@ -31,7 +30,12 @@ namespace Projet.Service
 
         public IReadOnlyList<BackupJob> GetJobs() => _jobs.AsReadOnly();
 
-        
+        // Ajout pour charger les jobs depuis un fichier
+        public void SetJobs(List<BackupJob> jobs)
+        {
+            _jobs = jobs ?? new List<BackupJob>();
+        }
+
         public async Task ExecuteBackupAsync(string name)
         {
             BackupJob job = _jobs.First(j => j.Name == name);
@@ -55,7 +59,6 @@ namespace Projet.Service
                 await ExecuteBackupAsync(job.Name);
         }
 
-        
         private void Report(StatusEntry entry)
         {
             _logger.UpdateStatus(entry);
