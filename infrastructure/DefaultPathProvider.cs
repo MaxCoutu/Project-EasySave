@@ -8,7 +8,7 @@ namespace Projet.Infrastructure
 	public class DefaultPathProvider : IPathProvider
 	{
 		private static readonly string BaseDir =
-			@"C:\Projet";
+			@"C:\EasySave";
 
 		public string GetLogDir()
 		{
