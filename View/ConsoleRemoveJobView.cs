@@ -1,8 +1,6 @@
+﻿using System;
 using Projet.Service;
 using Projet.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Projet.View
 {
@@ -19,6 +17,7 @@ namespace Projet.View
 
         public void Show()
         {
+            Console.Clear();
             var jobs = _svc.GetJobs();
             if (jobs.Count == 0)
             {
@@ -40,6 +39,5 @@ namespace Projet.View
         }
 
         public void Close() { }
-
     }
 }

@@ -1,10 +1,8 @@
+﻿using System;
 using Projet.Infrastructure;
 using Projet.Model;
 using Projet.Service;
 using Projet.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Projet.View
 {
@@ -12,18 +10,21 @@ namespace Projet.View
     {
         private readonly MainViewModel _vm;
         private readonly ILanguageService _lang;
-        private readonly IAddJobView _addView;
+        private readonly IAddJobView _add;
+        private readonly IRemoveJobView _remove;
         private readonly IBackupService _svc;
 
         public ConsoleMainView(
             MainViewModel vm,
             ILanguageService lang,
-            IAddJobView addView,
+            IAddJobView add,
+            IRemoveJobView remove,
             IBackupService svc)
         {
             _vm = vm;
             _lang = lang;
-            _addView = addView;
+            _add = add;
+            _remove = remove;
             _svc = svc;
 
             _vm.StatusUpdated += OnStatus;
@@ -35,70 +36,100 @@ namespace Projet.View
             while (!exit)
             {
                 Console.Clear();
-                Console.WriteLine("=== EasySave ===");
-                Console.WriteLine("1. List jobs");
-                Console.WriteLine("2. Run selected job");
-                Console.WriteLine("3. Run all jobs");
-                Console.WriteLine("4. Add job");
-                Console.WriteLine("0. Exit");
-                Console.Write("Choice: ");
+                Console.WriteLine(_lang.Translate("menu_title"));
+                Console.WriteLine(_lang.Translate("menu_list"));
+                Console.WriteLine(_lang.Translate("menu_runselected"));
+                Console.WriteLine(_lang.Translate("menu_runall"));
+                Console.WriteLine(_lang.Translate("menu_add"));
+                Console.WriteLine(_lang.Translate("menu_remove"));
+                Console.WriteLine(_lang.Translate("menu_exit"));
+                Console.Write(_lang.Translate("menu_choice"));
 
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        ListJobs(); Pause(); break;
+                        Console.Clear();
+                        ListJobs();
+                        Pause();
+                        break;
 
                     case "2":
+                        Console.Clear();
                         SelectJob();
                         _vm.RunSelectedAsync().Wait();
-                        Pause(); break;
+                        Pause();
+                        break;
 
                     case "3":
+                        Console.Clear();
                         _vm.RunAllAsync().Wait();
-                        Pause(); break;
+                        Pause();
+                        break;
 
                     case "4":
-                        _addView.Show();
-                        RefreshJobs();
-                        Pause(); break;
+                        Console.Clear();
+                        _add.Show();
+                        Refresh();
+                        Pause();
+                        break;
+
+                    case "5":
+                        Console.Clear();
+                        _remove.Show();
+                        Refresh();
+                        Pause();
+                        break;
 
                     case "0":
-                        exit = true; break;
+                        exit = true;
+                        break;
+
+                    default:
+                        Console.WriteLine(_lang.Translate("invalid_choice"));
+                        Pause();
+                        break;
                 }
             }
         }
-
         public void Close() { }
 
-
+      
         private void ListJobs()
         {
-            Console.WriteLine("Jobs:");
+            Console.WriteLine(_lang.Translate("jobs_label"));
+            Console.WriteLine(new string('─', 60));
+
             for (int i = 0; i < _vm.Jobs.Count; i++)
-                Console.WriteLine($"{i + 1}. {_vm.Jobs[i].Name} ({_vm.Jobs[i].Strategy.Type})");
+            {
+                BackupJob j = _vm.Jobs[i];
+                Console.WriteLine($"{i + 1}. {j.Name}");
+                Console.WriteLine($"   Source : {j.SourceDir}");
+                Console.WriteLine($"   Target : {j.TargetDir}");
+                Console.WriteLine($"   Type   : {j.Strategy.Type}");
+                Console.WriteLine(new string('─', 60));
+            }
         }
 
         private void SelectJob()
         {
             ListJobs();
-            Console.Write("Select #: ");
+            Console.Write(_lang.Translate("menu_choice"));
             if (int.TryParse(Console.ReadLine(), out int idx) &&
                 idx > 0 && idx <= _vm.Jobs.Count)
-            {
                 _vm.SelectedJob = _vm.Jobs[idx - 1];
-            }
         }
 
-        private void RefreshJobs()
+        private void Refresh()
         {
             _vm.Jobs.Clear();
-            foreach (var job in _svc.GetJobs())
-                _vm.Jobs.Add(job);
+            foreach (BackupJob j in _svc.GetJobs())
+                _vm.Jobs.Add(j);
         }
 
-        private static void Pause()
+        private void Pause()
         {
-            Console.WriteLine("Press any key�");
+            Console.WriteLine();
+            Console.WriteLine(_lang.Translate("press_key"));
             Console.ReadKey();
         }
 

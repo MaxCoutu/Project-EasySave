@@ -1,10 +1,8 @@
+﻿using System;
+using System.IO;
 using Projet.Model;
 using Projet.Service;
 using Projet.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
 
 namespace Projet.View
 {
@@ -21,6 +19,7 @@ namespace Projet.View
 
         public void Show()
         {
+            Console.Clear();
             Console.Write("Job name      : ");
             string name = Console.ReadLine()?.Trim() ?? "";
 
@@ -43,15 +42,15 @@ namespace Projet.View
             Console.Write("Type (full/diff): ");
             string t = Console.ReadLine()?.Trim().ToLower() ?? "full";
 
-            IBackupStrategy strat = t == "diff"
+            IBackupStrategy strategy = t == "diff"
                 ? (IBackupStrategy)new DifferentialBackupStrategy()
                 : new FullBackupStrategy();
 
             _vm.Builder
-               .WithName(name)
-               .WithSource(src)
-               .WithTarget(dst)
-               .WithStrategy(strat);
+                .WithName(name)
+                .WithSource(src)
+                .WithTarget(dst)
+                .WithStrategy(strategy);
 
             _vm.AddJob();
             Console.WriteLine("Job added.");
