@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Projet.csproj",
-      "projectName": "Projet",
-      "projectPath": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Projet.csproj",
+      "projectUniqueName": "C:\\Users\\jmail\\source\\repos\\ProjetGeniLog\\Project-EasySave\\Project-EasySave.csproj",
+      "projectName": "Project-EasySave",
+      "projectPath": "C:\\Users\\jmail\\source\\repos\\ProjetGeniLog\\Project-EasySave\\Project-EasySave.csproj",
       "packagesPath": "C:\\Users\\jmail\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\obj\\",
+      "outputPath": "C:\\Users\\jmail\\source\\repos\\ProjetGeniLog\\Project-EasySave\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

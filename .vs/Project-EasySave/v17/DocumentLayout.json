@@ -1,51 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jmail\\source\\repos\\MaxCoutu\\Project-EasySave\\",
+  "WorkspaceRootPath": "C:\\Users\\jmail\\source\\repos\\ProjetGeniLog\\Project-EasySave\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\ViewModel\\ViewModelBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\ViewModel\\RemoveJobViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\ViewModel\\MainViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\ViewModel\\AddJobViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Service\\JsonLanguageService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Service\\ILanguageService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Service\\IBackupService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Service\\BackupService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\IBackupStrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\FullBackupStrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\DifferentialBackupStrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\BackupStrategyBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\BackupJobBuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\BackupJob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF204052-F1D7-48FA-96A9-A077898A4717}|Project-EasySave.csproj|c:\\users\\jmail\\source\\repos\\projetgenilog\\project-easysave\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF204052-F1D7-48FA-96A9-A077898A4717}|Project-EasySave.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,203 +33,25 @@
               "Name": "ST:131:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Program.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\Program.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Program.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:48.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ViewModelBase.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\ViewModel\\ViewModelBase.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\ViewModel\\ViewModelBase.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\ViewModel\\ViewModelBase.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\ViewModel\\ViewModelBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RemoveJobViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\ViewModel\\RemoveJobViewModel.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\ViewModel\\RemoveJobViewModel.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\ViewModel\\RemoveJobViewModel.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\ViewModel\\RemoveJobViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\ViewModel\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\ViewModel\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\ViewModel\\MainViewModel.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AddJobViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\ViewModel\\AddJobViewModel.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\ViewModel\\AddJobViewModel.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\ViewModel\\AddJobViewModel.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\ViewModel\\AddJobViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "JsonLanguageService.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Service\\JsonLanguageService.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\Service\\JsonLanguageService.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Service\\JsonLanguageService.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\Service\\JsonLanguageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ILanguageService.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Service\\ILanguageService.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\Service\\ILanguageService.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Service\\ILanguageService.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\Service\\ILanguageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IBackupService.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Service\\IBackupService.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\Service\\IBackupService.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Service\\IBackupService.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\Service\\IBackupService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BackupService.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Service\\BackupService.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\Service\\BackupService.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Service\\BackupService.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\Service\\BackupService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IBackupStrategy.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\IBackupStrategy.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\Model\\IBackupStrategy.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\IBackupStrategy.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\Model\\IBackupStrategy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FullBackupStrategy.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\FullBackupStrategy.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\Model\\FullBackupStrategy.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\FullBackupStrategy.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\Model\\FullBackupStrategy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.246Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DifferentialBackupStrategy.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\DifferentialBackupStrategy.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\Model\\DifferentialBackupStrategy.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\DifferentialBackupStrategy.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\Model\\DifferentialBackupStrategy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BackupStrategyBase.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\BackupStrategyBase.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\Model\\BackupStrategyBase.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\BackupStrategyBase.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\Model\\BackupStrategyBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BackupJobBuilder.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\BackupJobBuilder.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\Model\\BackupJobBuilder.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\BackupJobBuilder.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\Model\\BackupJobBuilder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:30.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "BackupJob.cs",
-              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\BackupJob.cs",
-              "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\Model\\BackupJob.cs",
-              "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Model\\BackupJob.cs",
-              "RelativeToolTip": "..\\..\\Projet\\Projet\\Model\\BackupJob.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:30.256Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jmail\\source\\repos\\ProjetGeniLog\\Project-EasySave\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jmail\\source\\repos\\ProjetGeniLog\\Project-EasySave\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T10:17:17.058Z",
+              "EditorCaption": ""
             }
           ]
         }

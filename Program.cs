@@ -1,33 +1,42 @@
-﻿using Projet.Infrastructure;
+﻿using System;
+using Projet.Infrastructure;
+using Projet.Model;
 using Projet.Service;
 using Projet.View;
 using Projet.ViewModel;
-using System;
 
 namespace Projet
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            IPathProvider paths = new DefaultPathProvider();
+            
+            Console.Write("Choose language (en/fr) [en] : ");
+            string langCode = Console.ReadLine()?.Trim().ToLower();
+            if (langCode != "fr") langCode = "en";    
+            string dictPath = $"Languages/{langCode}.json";
+
+      
+            IPathProvider paths = new DefaultPathProvider();     
             ILogger logger = new JsonLogger(paths);
+            IJobRepository repo = new TxtJobRepository(paths);
 
-            
-            IBackupService backupSvc = new BackupService(logger);
-            ILanguageService langSvc = new JsonLanguageService("Languages/en.json");
+        
+            IBackupService backup = new BackupService(logger, repo);
+            ILanguageService lang = new JsonLanguageService(dictPath);
 
-            
-            MainViewModel mainVm = new MainViewModel(backupSvc);
-            AddJobViewModel addVm = new AddJobViewModel(backupSvc);
-            RemoveJobViewModel removeVm = new RemoveJobViewModel(backupSvc);
+          
+            MainViewModel mainVm = new MainViewModel(backup);
+            AddJobViewModel addVm = new AddJobViewModel(backup);
+            RemoveJobViewModel remVm = new RemoveJobViewModel(backup);
 
-            
-            IAddJobView addView = new ConsoleAddJobView(addVm, langSvc);
-            IRemoveJobView removeView = new ConsoleRemoveJobView(removeVm, backupSvc);
+           
+            IAddJobView addView = new ConsoleAddJobView(addVm, lang);
+            IRemoveJobView remView = new ConsoleRemoveJobView(remVm, backup);
 
-            
-            IMainView mainView = new ConsoleMainView(mainVm, langSvc, addView, backupSvc);
+            IMainView mainView = new ConsoleMainView(
+                mainVm, lang, addView, remView, backup);
 
            
             mainView.Show();
