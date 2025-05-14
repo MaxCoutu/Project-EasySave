@@ -77,7 +77,7 @@ namespace Projet.Service
                 string dest = Path.Combine(job.TargetDir, rel);
                 Directory.CreateDirectory(Path.GetDirectoryName(dest));
             
-                 /* ----- copie brute ----- */
+                 
                 var swCopy = System.Diagnostics.Stopwatch.StartNew();
                 await Task.Run(() => File.Copy(src, dest, true));
                 swCopy.Stop();
