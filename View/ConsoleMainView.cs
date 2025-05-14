@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Projet.Infrastructure;
 using Projet.Model;
 using Projet.Service;
@@ -8,26 +9,26 @@ namespace Projet.View
 {
     public class ConsoleMainView : IMainView
     {
-        private readonly MainViewModel _vm;
+        private readonly MainViewModel    _vm;
         private readonly ILanguageService _lang;
-        private readonly IAddJobView _add;
-        private readonly IRemoveJobView _remove;
-        private readonly IBackupService _svc;
+        private readonly IAddJobView      _add;
+        private readonly IRemoveJobView   _remove;
+        private readonly IBackupService   _svc;
 
         public ConsoleMainView(
-            MainViewModel vm,
+            MainViewModel    vm,
             ILanguageService lang,
-            IAddJobView add,
-            IRemoveJobView remove,
-            IBackupService svc)
+            IAddJobView      add,
+            IRemoveJobView   remove,
+            IBackupService   svc)
         {
-            _vm = vm;
-            _lang = lang;
-            _add = add;
+            _vm     = vm;
+            _lang   = lang;
+            _add    = add;
             _remove = remove;
-            _svc = svc;
+            _svc    = svc;
 
-            _vm.StatusUpdated += OnStatus;
+            _svc.StatusUpdated += OnStatus;
         }
 
         public void Show()
@@ -48,52 +49,35 @@ namespace Projet.View
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        Console.Clear();
-                        ListJobs();
-                        Pause();
-                        break;
+                        Console.Clear(); ListJobs();     Pause(); break;
 
                     case "2":
-                        Console.Clear();
-                        SelectJob();
-                        _vm.RunSelectedAsync().Wait();
-                        Pause();
-                        break;
+                        Console.Clear(); SelectJob();
+                        RunSelectedJob().Wait();
+                        Pause(); break;
 
                     case "3":
                         Console.Clear();
-                        _vm.RunAllAsync().Wait();
-                        Pause();
-                        break;
+                        _svc.ExecuteAllBackupsAsync().Wait();
+                        Pause(); break;
 
                     case "4":
-                        Console.Clear();
-                        _add.Show();
-                        Refresh();
-                        Pause();
-                        break;
+                        Console.Clear(); _add.Show(); Refresh(); Pause(); break;
 
                     case "5":
-                        Console.Clear();
-                        _remove.Show();
-                        Refresh();
-                        Pause();
-                        break;
+                        Console.Clear(); _remove.Show(); Refresh(); Pause(); break;
 
-                    case "0":
-                        exit = true;
-                        break;
+                    case "0": exit = true; break;
 
                     default:
                         Console.WriteLine(_lang.Translate("invalid_choice"));
-                        Pause();
-                        break;
+                        Pause(); break;
                 }
             }
         }
         public void Close() { }
 
-      
+        /* ---------- jobs list ---------- */
         private void ListJobs()
         {
             Console.WriteLine(_lang.Translate("jobs_label"));
@@ -119,6 +103,15 @@ namespace Projet.View
                 _vm.SelectedJob = _vm.Jobs[idx - 1];
         }
 
+        /* ---------- run helpers ---------- */
+        private Task RunSelectedJob()
+        {
+            return _vm.SelectedJob == null
+                ? Task.CompletedTask
+                : _svc.ExecuteBackupAsync(_vm.SelectedJob.Name);
+        }
+
+        /* ---------- utils ---------- */
         private void Refresh()
         {
             _vm.Jobs.Clear();

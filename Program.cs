@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Projet.Infrastructure;
 using Projet.Model;
 using Projet.Service;
@@ -13,32 +14,31 @@ namespace Projet
         {
             
             Console.Write("Choose language (en/fr) [en] : ");
-            string langCode = Console.ReadLine()?.Trim().ToLower();
-            if (langCode != "fr") langCode = "en";    
-            string dictPath = $"Languages/{langCode}.json";
+            string code = Console.ReadLine()?.Trim().ToLower();
+            if (code != "fr") code = "en";
 
-      
-            IPathProvider paths = new DefaultPathProvider();     
-            ILogger logger = new JsonLogger(paths);
-            IJobRepository repo = new TxtJobRepository(paths);
+            string dictPath = Path.Combine(AppContext.BaseDirectory,
+                                           "Languages", $"{code}.json");
 
         
-            IBackupService backup = new BackupService(logger, repo);
+            IPathProvider  paths  = new DefaultPathProvider();
+            Settings       set    = Settings.Load(paths);
+            ILogger        logger = new JsonLogger(paths);
+            IJobRepository repo   = new TxtJobRepository(paths);
+
+            
+            IBackupService backup = new BackupService(logger, repo, set);
             ILanguageService lang = new JsonLanguageService(dictPath);
 
-          
-            MainViewModel mainVm = new MainViewModel(backup);
-            AddJobViewModel addVm = new AddJobViewModel(backup);
-            RemoveJobViewModel remVm = new RemoveJobViewModel(backup);
-
            
-            IAddJobView addView = new ConsoleAddJobView(addVm, lang);
+            var mainVm = new MainViewModel(backup);
+            var addVm  = new AddJobViewModel(backup);
+            var remVm  = new RemoveJobViewModel(backup);
+
+            IAddJobView    addView = new ConsoleAddJobView(addVm, lang);
             IRemoveJobView remView = new ConsoleRemoveJobView(remVm, backup);
 
-            IMainView mainView = new ConsoleMainView(
-                mainVm, lang, addView, remView, backup);
-
-           
+            IMainView mainView = new ConsoleMainView(mainVm, lang, addView, remView, backup);
             mainView.Show();
         }
     }

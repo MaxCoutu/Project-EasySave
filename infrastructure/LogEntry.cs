@@ -12,6 +12,7 @@ namespace Projet.Infrastructure
         public string DestPath { get; set; } = "";
         public long FileSize { get; set; }
         public int TransferTimeMs { get; set; }
+        public int EncryptionTimeMs { get; set; }
 
         public LogEntry() { }
 

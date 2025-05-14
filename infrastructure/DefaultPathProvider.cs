@@ -7,19 +7,20 @@ namespace Projet.Infrastructure
 {
     public class DefaultPathProvider: IPathProvider
     {
-        private static readonly string BaseDir =
+        private const string Base =
             @"C:\Projet";
 
+        public string GetBaseDir()  => Base;
         public string GetLogDir()
         {
-            string dir = Path.Combine(BaseDir, "Logs");
+            string dir = Path.Combine(Base, "Logs");
             Directory.CreateDirectory(dir);
             return dir;
         }
 
         public string GetStatusDir()
         {
-            string dir = Path.Combine(BaseDir, "Status");
+            string dir = Path.Combine(Base, "Status");
             Directory.CreateDirectory(dir);
             return dir;
         }

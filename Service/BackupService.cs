@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Projet.Infrastructure;
@@ -7,29 +8,26 @@ using Projet.Model;
 
 namespace Projet.Service
 {
-
     public class BackupService : IBackupService
     {
         public event Action<StatusEntry> StatusUpdated;
 
-        private readonly ILogger _logger;
-        private readonly IJobRepository _repo;
+        private readonly ILogger         _logger;
+        private readonly IJobRepository  _repo;
+        private readonly Settings        _settings;
         private readonly List<BackupJob> _jobs;
 
-        private const int MaxJobs = 5;
-
-        public BackupService(ILogger logger, IJobRepository repo)
+        public BackupService(ILogger logger, IJobRepository repo, Settings settings)
         {
-            _logger = logger;
-            _repo = repo;
-            _jobs = new List<BackupJob>(_repo.Load());
+            _logger   = logger;
+            _repo     = repo;
+            _settings = settings;
+            _jobs     = new List<BackupJob>(_repo.Load());   // illimité
         }
 
+        
         public void AddBackup(BackupJob job)
         {
-            if (_jobs.Count >= MaxJobs)
-                throw new InvalidOperationException("Maximum number of backup jobs reached (5).");
-
             _jobs.Add(job);
             _repo.Save(_jobs);
         }
@@ -42,35 +40,84 @@ namespace Projet.Service
 
         public IReadOnlyList<BackupJob> GetJobs() => _jobs.AsReadOnly();
 
-
+        
         public async Task ExecuteBackupAsync(string name)
         {
-            BackupJob job = _jobs.First(j => j.Name == name);
+            if (PackageBlocker.IsBlocked(_settings))
+            {
+                Console.WriteLine("Blocked package running — job skipped.");
+                return;
+            }
 
-            Report(new StatusEntry(job.Name, "", "", "PENDING", 0, 0, 0, 0));
-
-            DateTime start = DateTime.UtcNow;
-            await job.RunAsync(Report);
-            DateTime end = DateTime.UtcNow;
-
-            Report(new StatusEntry(job.Name, "", "", "END", 0, 0, 0, 1));
-
-            _logger.LogEvent(new LogEntry(
-                end, job.Name, job.SourceDir, job.TargetDir,
-                0, (int)(end - start).TotalMilliseconds));
+            var job = _jobs.First(j => j.Name == name);
+            Report(new StatusEntry { Name = job.Name, State = "PENDING" });
+            await ProcessJobAsync(job);
+            Report(new StatusEntry { Name = job.Name, State = "END" });
         }
 
         public async Task ExecuteAllBackupsAsync()
         {
-            foreach (BackupJob job in _jobs)
-                await ExecuteBackupAsync(job.Name);
+            foreach (var j in _jobs)
+            {
+                if (PackageBlocker.IsBlocked(_settings)) break;
+                await ExecuteBackupAsync(j.Name);
+            }
         }
 
     
-        private void Report(StatusEntry entry)
+        private async Task ProcessJobAsync(BackupJob job)
         {
-            _logger.UpdateStatus(entry);
-            StatusUpdated?.Invoke(entry);
+            var files      = Directory.EnumerateFiles(job.SourceDir, "*", SearchOption.AllDirectories).ToList();
+            long totalSize = files.Sum(f => new FileInfo(f).Length);
+            int  total     = files.Count, left = total;
+
+            foreach (string src in files)
+            {
+                string rel  = Path.GetRelativePath(job.SourceDir, src);
+                string dest = Path.Combine(job.TargetDir, rel);
+                Directory.CreateDirectory(Path.GetDirectoryName(dest));
+            
+                var swCopy = System.Diagnostics.Stopwatch.StartNew();
+                await Task.Run(() => File.Copy(src, dest, true));
+                swCopy.Stop();
+
+                int encMs = 0;
+                if (_settings.CryptoExtensions.Contains(Path.GetExtension(src).ToLower()))
+                {
+                    encMs = CryptoSoftHelper.Encrypt(dest, _settings);
+                    Console.WriteLine($"🔐{Path.GetFileName(dest)} encrypted in {encMs} ms");
+                }
+
+                _logger.LogEvent(new LogEntry
+                {
+                    Timestamp        = DateTime.UtcNow,
+                    JobName          = job.Name,
+                    SourcePath       = src,
+                    DestPath         = dest,
+                    FileSize         = new FileInfo(src).Length,
+                    TransferTimeMs   = (int)swCopy.ElapsedMilliseconds,
+                    EncryptionTimeMs = encMs
+                });
+
+                left--;
+                Report(new StatusEntry
+                {
+                    Name = job.Name,
+                    SourceFilePath    = src,
+                    TargetFilePath    = dest,
+                    State             = "ACTIVE",
+                    TotalFilesToCopy  = total,
+                    TotalFilesSize    = totalSize,
+                    NbFilesLeftToDo   = left,
+                    Progression       = (total - left) / (double)total
+                });
+            }
+        }
+
+        private void Report(StatusEntry s)
+        {
+            _logger.UpdateStatus(s);
+            StatusUpdated?.Invoke(s);
         }
     }
 }

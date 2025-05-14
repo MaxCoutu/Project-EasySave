@@ -1,11 +1,10 @@
-﻿using Projet.Infrastructure;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Projet.Infrastructure;
 using Projet.Model;
 using Projet.Service;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projet.ViewModel
 {
@@ -14,26 +13,32 @@ namespace Projet.ViewModel
         private readonly IBackupService _svc;
 
         public ObservableCollection<BackupJob> Jobs { get; }
-        private BackupJob _selectedJob;
-        public BackupJob SelectedJob
+        private BackupJob _selected;
+        public  BackupJob SelectedJob
         {
-            get => _selectedJob;
-            set { _selectedJob = value; OnPropertyChanged(); }
+            get => _selected;
+            set { _selected = value; OnPropertyChanged(); }
         }
 
-        public event Action<StatusEntry> StatusUpdated;
+        public ICommand AddJobCmd      { get; }
+        public ICommand RemoveJobCmd   { get; }
+        public ICommand RunSelectedCmd { get; }
+        public ICommand RunAllCmd      { get; }
 
         public MainViewModel(IBackupService svc)
         {
-            _svc = svc;
-            Jobs = new ObservableCollection<BackupJob>(_svc.GetJobs());
-            _svc.StatusUpdated += s => StatusUpdated?.Invoke(s);
+            _svc  = svc;
+            Jobs  = new ObservableCollection<BackupJob>(_svc.GetJobs());
+
+            AddJobCmd      = new RelayCommand(_ => AddJobRequested?.Invoke());
+            RemoveJobCmd   = new RelayCommand(_ => RemoveJobRequested?.Invoke());
+            RunSelectedCmd = new RelayCommand(_ => _svc.ExecuteBackupAsync(_selected?.Name));
+            RunAllCmd      = new RelayCommand(_ => _svc.ExecuteAllBackupsAsync());
+
+            _svc.StatusUpdated += s => { /* update UI if needed */ };
         }
 
-        public Task RunSelectedAsync() => _selectedJob == null
-            ? Task.CompletedTask
-            : _svc.ExecuteBackupAsync(_selectedJob.Name);
-
-        public Task RunAllAsync() => _svc.ExecuteAllBackupsAsync();
+        public event Action AddJobRequested;
+        public event Action RemoveJobRequested;
     }
 }
