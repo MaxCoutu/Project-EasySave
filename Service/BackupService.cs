@@ -77,16 +77,18 @@ namespace Projet.Service
                 string dest = Path.Combine(job.TargetDir, rel);
                 Directory.CreateDirectory(Path.GetDirectoryName(dest));
             
+                 /* ----- copie brute ----- */
                 var swCopy = System.Diagnostics.Stopwatch.StartNew();
                 await Task.Run(() => File.Copy(src, dest, true));
                 swCopy.Stop();
 
                 int encMs = 0;
-                if (_settings.CryptoExtensions.Contains(Path.GetExtension(src).ToLower()))
-                {
-                    encMs = CryptoSoftHelper.Encrypt(dest, _settings);
-                    Console.WriteLine($"🔐{Path.GetFileName(dest)} encrypted in {encMs} ms");
-                }
+            if (_settings.CryptoExtensions.Contains(Path.GetExtension(src).ToLower()))
+            {
+                encMs = CryptoSoftHelper.Encrypt(dest, _settings);
+                _ = CryptoSoftHelper.Encrypt(dest, _settings);   
+                
+            }
 
                 _logger.LogEvent(new LogEntry
                 {
