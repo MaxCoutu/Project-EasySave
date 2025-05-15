@@ -40,6 +40,9 @@ namespace Projet
 
             IMainView mainView = new ConsoleMainView(mainVm, lang, addView, remView, backup);
             mainView.Show();
+
+
+
         }
     }
 }
