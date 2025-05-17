@@ -55,7 +55,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,6 +74,14 @@
               "Name": "ST:131:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
@@ -81,7 +89,7 @@
               "RelativeDocumentMoniker": "..\\..\\Projet\\Projet\\Program.cs",
               "ToolTip": "C:\\Users\\jmail\\source\\repos\\Projet\\Projet\\Program.cs",
               "RelativeToolTip": "..\\..\\Projet\\Projet\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T16:06:48.605Z",
               "EditorCaption": ""
@@ -96,8 +104,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\ViewModel\\ViewModelBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:06:31.839Z"
             },
             {
               "$type": "Document",
@@ -109,8 +116,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\ViewModel\\RemoveJobViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:06:31.771Z"
             },
             {
               "$type": "Document",
@@ -122,8 +128,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\ViewModel\\MainViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:06:31.706Z"
             },
             {
               "$type": "Document",
@@ -135,8 +140,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\ViewModel\\AddJobViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:06:31.641Z"
             },
             {
               "$type": "Document",
@@ -148,8 +152,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\Service\\JsonLanguageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:06:31.572Z"
             },
             {
               "$type": "Document",
@@ -161,8 +164,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\Service\\ILanguageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.506Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:06:31.506Z"
             },
             {
               "$type": "Document",
@@ -174,8 +176,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\Service\\IBackupService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:06:31.441Z"
             },
             {
               "$type": "Document",
@@ -187,8 +188,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\Service\\BackupService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:06:31.377Z"
             },
             {
               "$type": "Document",
@@ -200,8 +200,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\Model\\IBackupStrategy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:06:31.312Z"
             },
             {
               "$type": "Document",
@@ -213,8 +212,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\Model\\FullBackupStrategy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:06:31.246Z"
             },
             {
               "$type": "Document",
@@ -226,8 +224,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\Model\\DifferentialBackupStrategy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:06:31.169Z"
             },
             {
               "$type": "Document",
@@ -239,8 +236,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\Model\\BackupStrategyBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:31.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:06:31.097Z"
             },
             {
               "$type": "Document",
@@ -252,8 +248,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\Model\\BackupJobBuilder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:30.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T16:06:30.877Z"
             },
             {
               "$type": "Document",
@@ -265,12 +260,7 @@
               "RelativeToolTip": "..\\..\\Projet\\Projet\\Model\\BackupJob.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T16:06:30.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2025-05-08T16:06:30.256Z"
             }
           ]
         }
